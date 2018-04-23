@@ -1,0 +1,20 @@
+{
+  "name": "unsafeCoerceBot",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^3.3.0",
+    "purescript-console": "^3.0.0",
+    "purescript-psc-ide": "https://github.com/kritzcreek/purescript-psc-ide.git#master",
+    "purescript-moldy": "^2.1.0",
+    "purescript-unicode": "^3.0.2",
+    "purescript-io": "^5.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^3.0.0"
+  }
+}

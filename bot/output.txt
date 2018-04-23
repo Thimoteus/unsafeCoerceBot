@@ -1,0 +1,7 @@
+* Building project in /home/evante/programming/purescript/unsafeCoerceBot/bot
+Compiling Main
+           Src   Lib   All
+[33mWarnings[0m   [32m0[0m     [32m0[0m     [32m0[0m  
+[31mErrors[0m     [32m0[0m     [32m0[0m     [32m0[0m  
+* Build successful.
+15
