@@ -1,7 +1,75 @@
 * Building project in /home/evante/programming/purescript/unsafeCoerceBot/bot
 Compiling Main
+[31m[1/2 HoleInferredType][0m src/Main.purs[2m:[0m3[2m:[0m7
+
+  [2m3  [0mx =  (?map ?trav 5) :: String
+           [31m^^^^[0m
+  
+  Hole 'map' has the inferred type
+  
+    t0 -> Int -> String
+  
+  You could substitute the hole with one of these values:
+  
+    Control.Applicative.pure                   :: forall a f. Applicative f => a -> f a
+    Control.Bind.join                          :: forall a m. Bind m => m (m a) -> m a
+    Control.Category.id                        :: forall t a. Category a => a t t
+    Control.Comonad.Cofree.head                :: forall f a. Cofree f a -> a
+    Control.Comonad.Traced.runTraced           :: forall m a. TracedT m Identity a -> m -> a
+    Control.Lazy.defer                         :: forall l. Lazy l => (Unit -> l) -> l
+    Control.Lazy.fix                           :: forall l. Lazy l => (l -> l) -> l
+    Control.Monad.Eff.runPure                  :: forall a. Pure a -> a
+    Control.Monad.Eff.Unsafe.unsafePerformEff  :: forall eff a. Eff eff a -> a
+    Control.Monad.Reader.runReader             :: forall r a. ReaderT r Identity a -> r -> a
+    Control.Monad.Reader.Class.ask             :: forall m r. MonadAsk r m => m r
+    Control.Monad.Reader.Class.asks            :: forall r m a. MonadAsk r m => (r -> a) -> m a
+    Control.Monad.Rec.Class.forever            :: forall m a b. MonadRec m => m a -> m b
+    Control.Monad.Rec.Class.tailRec            :: forall a b. (a -> Step a b) -> a -> b
+    Control.Monad.ST.pureST                    :: forall a.
+                                                    (forall h.
+                                                       Eff
+                                                         ( st :: ST h
+                                                         )
+                                                         a
+                                                    )
+                                                    -> a
+  
+  in value declaration x
+  
+  where t0 is an unknown type
+
+[31m[2/2 HoleInferredType][0m src/Main.purs[2m:[0m3[2m:[0m12
+
+  [2m3  [0mx =  (?map ?trav 5) :: String
+                [31m^^^^^[0m
+  
+  Hole 'trav' has the inferred type
+  
+    t0
+  
+  You could substitute the hole with one of these values:
+  
+    Control.Comonad.Cofree.deferCofree     :: forall f a. (Unit -> Tuple a (f (Cofree f a))) -> Cofree f a
+    Control.Comonad.Cofree.head            :: forall f a. Cofree f a -> a
+    Control.Comonad.Cofree.mkCofree        :: forall f a. a -> f (Cofree f a) -> Cofree f a
+    Control.Comonad.Cofree.tail            :: forall f a. Cofree f a -> f (Cofree f a)
+    Control.Comonad.Env.env                :: forall e a. e -> a -> EnvT e Identity a
+    Control.Comonad.Env.mapEnv             :: forall e a b. (a -> b) -> EnvT e Identity a -> EnvT e Identity b
+    Control.Comonad.Env.runEnv             :: forall e a. EnvT e Identity a -> Tuple e a
+    Control.Comonad.Env.withEnv            :: forall e1 e2 a. (e1 -> e2) -> EnvT e1 Identity a -> EnvT e2 Identity a
+    Control.Comonad.Env.Trans.mapEnvT      :: forall e w1 w2 a b. (w1 a -> w2 b) -> EnvT e w1 a -> EnvT e w2 b
+    Control.Comonad.Env.Trans.runEnvT      :: forall e w a. EnvT e w a -> Tuple e (w a)
+    Control.Comonad.Env.Trans.withEnvT     :: forall e1 e2 w a. (e1 -> e2) -> EnvT e1 w a -> EnvT e2 w a
+    Control.Comonad.Store.runStore         :: forall s a. StoreT s Identity a -> Tuple (s -> a) s
+    Control.Comonad.Store.store            :: forall s a. (s -> a) -> s -> StoreT s Identity a
+    Control.Comonad.Store.Trans.runStoreT  :: forall s w a. StoreT s w a -> Tuple (w (s -> a)) s
+    Control.Comonad.Traced.runTraced       :: forall m a. TracedT m Identity a -> m -> a
+  
+  in value declaration x
+  
+  where t0 is an unknown type
+
            Src   Lib   All
 [33mWarnings[0m   [32m0[0m     [32m0[0m     [32m0[0m  
-[31mErrors[0m     [32m0[0m     [32m0[0m     [32m0[0m  
-* Build successful.
-15
+[31mErrors[0m     2     [32m0[0m     2  
+* ERROR: Subcommand terminated with exit code 1
